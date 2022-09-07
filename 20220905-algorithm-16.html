@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="root"></div>
+
+  <script>
+    const root = document.getElementById('root');
+    root.style.width = "100vw";
+    root.style.height = "100vh";
+    root.style.display = "flex";
+    root.style.flexWrap = "wrap";
+
+
+
+    function createElement(tagName, textContent) {
+      let element = [];
+      let temp = `<${tagName}>${textContent}</${tagName}>`
+      element.push(temp);
+      return element.join('');
+    }
+
+    function gugudan(number, limit) {
+      let gugu = [];
+      for (let i = 1; i <= limit; i++) {
+        let temp = "<li>" + number + " * " + i + " 는 " + (number * i) + "</li>"
+        gugu.push(temp);
+      }
+      return gugu.join('');
+    }
+
+
+    // function googoodan(dan, limit) {
+    //   let resultArray = [];
+    //   for (let i = 1; i <= limit; i++) {
+    //     resultArray.push(dan + " * " + i + " 는 " + (dan * i));
+    //   }
+    //   return resultArray.join('');
+    // }
+
+    // console.log(googoodan(2, 9))
+
+    // function newgoogoodan() {
+    //   let newResultArray = [];
+    //   for (let i = 2; i < 10; i++) {
+    //     newResultArray.push(googoodan(i, 9));
+    //   }
+    //   return newResultArray.join('');
+    // }
+
+    // console.log(newgoogoodan());
+
+    //root.innerHTML = createElement('ul',newgoogoodan())
+
+    // function result() {
+    //   for (let i = 2; i < 10; i++) {
+    //     gugudan(i, 9)
+    //   }
+    // }
+
+
+
+
+    root.innerHTML = createElement('ul', gugudan(2, 9)) + createElement('ul', gugudan(3, 9)) + createElement('ul', gugudan(4, 9)) + createElement('ul', gugudan(5, 9)) + createElement('ul', gugudan(6, 9)) + createElement('ul', gugudan(7, 9)) + createElement('ul', gugudan(8, 9)) + createElement('ul', gugudan(9, 9))
+
+
+
+
+  </script>
+</body>
+
+</html>
