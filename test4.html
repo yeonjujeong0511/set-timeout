@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {margin: 0; padding: 0; box-sizing: border-box;}
+    #root{
+      width: 100vw;
+      height: 100vh;
+      background-color: #333;
+      
+    }
+  </style>
+</head>
+<body>
+  <div id="root">
+    <section id="target"></section>
+  </div>
+  <script>
+    const targetSection = document.getElementById('target');
+    let size = 0;
+    targetSection.style.backgroundColor = "cadetblue"
+    
+    const timer = setInterval(function(){
+      size++;
+      targetSection.style.width = size + "px";
+      targetSection.style.height = `${size}px`;
+      if(size === 500){
+        targetSection.style.backgroundColor = "pink"
+      }
+      if(size === 1000){
+        clearInterval(timer);
+      }
+    },32)
+
+    targetSection.style.backgroundColor = "green"
+
+  </script>
+</body>
+</html>
