@@ -18,7 +18,7 @@
     function gugudan(number, limit) {
       let multiplyCounter = 0;
       let resultArray = [];
-
+      let resultNumberArray = [];
       for (let i = 1; i <= limit; i++) {
         let result = number * i;
         let guguresult = "<li>" + number + " * " + i + " = " + result + "</li>"
@@ -33,7 +33,10 @@
 
         Math.abs(result)
 
+        //Q-5. 수열의 합, 시그마 로직을 구현하세요. (에를 들어 1단의 총 합계 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 = 합계)  // 해결하지 못함
+
       }
+
 
       //Q-2. 백엔드 요청 : "스텝측정을 해야하므로, 곱셈이 몇 회 일어났는지 변수 multiplyCounter에 산출해 주세요."
       console.log(multiplyCounter + "번")
@@ -47,10 +50,6 @@
 
     root.innerHTML = gugudan(3, 9).join('') + gugudan(4, 9).join('') + gugudan(5, 9).join('') + gugudan(6, 9).join('') + gugudan(7, 9).join('') + + gugudan(8, 9).join('') + gugudan(9, 9).join('')
 
-
-    //Q-5. 수열의 합, 시그마 로직을 구현하세요. (에를 들어 1단의 총 합계 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 = 합계)  // 해결하지 못함
-
-    //let resultSum = 
 
 
     //Q-6. HTML에 나타난 구구단 중 항목 하나를 클릭하면 '클릭된 요소'가 삭제되도록 처리하세요.
